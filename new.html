@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .navbar {
+            background-color: #007bff;
+            padding: 10px;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+        .header {
+            text-align: center;
+            padding: 30px;
+            background-color: #007bff;
+            color: white;
+            position: relative;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header img {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        .bio-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .bio-section img {
+            border-radius: 50%;
+            margin-right: 20px;
+            width: 150px;
+            height: 150px;
+        }
+        .bio-section p {
+            flex: 1;
+            font-size: 1.1em;
+            margin: 0;
+            text-align: justify;
+        }
+        .skills-section {
+            background-color: #e9f5ff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .skills-section h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .skills-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skills-card {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+        .table-section {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+        .table-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
+        }
+        .table-section th, .table-section td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .table-section th {
+            background-color: #007bff;
+            color: white;
+        }
+        .contact-form-section {
+            background-color: #e9f5ff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .contact-form-section h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .contact-form input[type="text"], 
+        .contact-form input[type="password"], 
+        .contact-form select, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .bio-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .bio-section img {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#bio">Bio</a>
+        <a href="#skills">Skills</a>
+        <a href="#table">Courses</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="container">
+        <div class="header">
+            <img src="images/logo.png" alt="Logo">
+            <h1>My Portfolio</h1>
+        </div>
+        <div id="bio" class="bio-section">
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="images/profile.jpg" alt="Profile Picture" style="width: 300px; height: 300px;">
+            </div>
+            
+                    <p style="font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 18px;font-size: 18px; color: #333;">
+                        Hello! I am Tehseen Ullah,
+                        <br><br>
+                        "I completed my SSC from Almehboob Model Academy from 2017 to 2019, followed by my HSSC from Islamia College and University, Peshawar, from 2019 to 2021. Currently, I am pursuing a BS in Software Engineering at Karakoram International University, where I have successfully completed six semesters since enrolling in 2021. I will be starting my 7th semester next month. Alongside my studies, I have developed strong skills in WordPress development, frontend development, and Java, enabling me to create responsive, user-friendly websites, applications, and robust backend solutions."
+                    </p>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="skills-cards">
+                <div class="skills-card">
+                    <img src="images/icons8-html-5-96.png" alt="HTML Icon" class="skill-icon">
+                    <h3>HTML5</h3>
+                    <p> Creating structured web pages with HTML, ensuring semantic clarity and content organization.
+                    </p>
+                </div>
+                <div class="skills-card">
+                    <img src="images/icons8-css3-96.png" alt="CSS Icon" class="skill-icon">
+                    <h3>CSS3</h3>
+                    <p>Designing and styling web pages using CSS for visually appealing and responsive layouts.</p>
+                </div>
+                <div class="skills-card">
+                    <img src="images/icons8-javascript-logo-96.png" alt="JavaScript Icon" class="skill-icon">
+                    <h3>JavaScript </h3>
+                    <p>Implementing interactive features and dynamic content to enhance user experiences on websites.</p>
+                </div>
+                <div class="skills-card">
+                    <img src="images/icons8-java-96.png" alt="Java Icon" class="skill-icon">
+                    <h3>Java</h3>
+                    <p>Developing robust backend systems and applications with Java for complex computational tasks.</p>
+                </div>
+                <div class="skills-card">
+                    <img src="images/icons8-wordpress-96.png" alt="WordPress Icon" class="skill-icon">
+                    <h3>WordPress</h3>
+                    <p>Building and customizing websites using WordPress, managing content, and utilizing plugins effectively.</p>
+                </div>
+                <div class="skills-card">
+                    <img src="images/icons8-python-96.png" alt="Python Icon" class="skill-icon">
+                    <h3>Python</h3>
+                    <p>Scripting and automating tasks with Python, and developing web applications using frameworks.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="table" class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Program</th>
+                        <th>Credits</th>
+                        <th>Instructor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tehseen Ullah</td>
+                        <td>Web Development</td>
+                        <td>30</td>
+                        <td>Sajid Hussain</td>
+                    </tr>
+                    <tr>
+                        <td>Tehseen Ullah</td>
+                        <td>Software Engineering</td>
+                        <td>40</td>
+                        <td>Sajid Hussain</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="contact" class="contact-form-section">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <label for="remarks">Remarks:</label>
+                <textarea id="remarks" name="remarks" rows="4"></textarea>
+                <input type="submit" value="Submit" style="width: fit-content; align-items: end;">
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 Tehseen Ullah | All rights reserved.
+    </div>
+</body>
+</html>
