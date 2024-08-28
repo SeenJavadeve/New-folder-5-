@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -53,18 +52,17 @@
             height: 60px;
             border-radius: 50%;
         }
+        .bio-section, .skills-section, .table-section, .contact-form-section {
+            border-radius: 15px; /* Add border-radius for rounded corners */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for card effect */
+            padding: 20px; /* Maintain padding */
+            margin-bottom: 20px; /* Maintain margin between sections */
+        }
         .bio-section {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
             background-color: #ffffff;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
         }
         .bio-section img {
             border-radius: 10%;
-            
             margin-right: 20px;
             width: 150px;
             height: 150px;
@@ -77,9 +75,6 @@
         }
         .skills-section {
             background-color: #e9f5ff;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
         .skills-section h2 {
             text-align: center;
@@ -87,38 +82,32 @@
             margin-bottom: 10px;
         }
         .skills-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.skills-card {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 150px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.skill-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .skills-card {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 150px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
         .table-section {
             background-color: #ffffff;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            overflow-x: auto;
+            overflow-x: auto; /* Keep table scrollable if necessary */
         }
         .table-section table {
             width: 100%;
@@ -137,9 +126,6 @@
         }
         .contact-form-section {
             background-color: #e9f5ff;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
         }
         .contact-form-section h2 {
             text-align: center;
@@ -213,22 +199,14 @@
         </div>
         <div id="bio" class="bio-section">
             <div style="display: flex; justify-content: center; align-items: center;">
-                <img src="images/profile.jpg" alt="Profile Picture" style="width: 300px; height: 300px; border-color: aquamarine;
-            box-shadow: 2px #333;">
+                <img src="images/profile.jpg" alt="Profile Picture" style="width: 300px; height: 300px; border-color: aquamarine; box-shadow: 2px #333;">
             </div>
-            
-                    <p style="font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 18px;font-size: 18px; color: #333;">
-                        Hello! I am Tehseen Ullah,
-                        <br><br>
-                        "I completed my SSC from Almehboob Model Academy from 2017 to 2019, followed by my HSSC from Islamia College and University, Peshawar, from 2019 to 2021. Currently, I am pursuing a BS in Software Engineering at Karakoram International University, where I have successfully completed six semesters since enrolling in 2021. I will be starting my 7th semester next month. Alongside my studies, I have developed strong skills in WordPress development, frontend development, and Java, enabling me to create responsive, user-friendly websites, applications, and robust backend solutions."
-                    </p>
-                </div>
-            </div>
-            
-            
+            <p style="font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 18px; color: #333;">
+                Hello! I am Tehseen Ullah,
+                <br><br>
+                "I completed my SSC from Almehboob Model Academy from 2017 to 2019, followed by my HSSC from Islamia College and University, Peshawar, from 2019 to 2021. Currently, I am pursuing a BS in Software Engineering at Karakoram International University, where I have successfully completed six semesters since enrolling in 2021. I will be starting my 7th semester next month. Alongside my studies, I have developed strong skills in WordPress development, frontend development, and Java, enabling me to create responsive, user-friendly websites, applications, and robust backend solutions."
+            </p>
         </div>
-       
-        
         <div id="table" class="table-section">
             <table>
                 <thead>
@@ -255,15 +233,13 @@
                 </tbody>
             </table>
         </div>
-
         <div id="skills" class="skills-section">
             <h2>Skills</h2>
             <div class="skills-cards">
                 <div class="skills-card">
                     <img src="images/icons8-html-5-96.png" alt="HTML Icon" class="skill-icon">
                     <h3>HTML5</h3>
-                    <p> Creating structured web pages with HTML, ensuring semantic clarity and content organization.
-                    </p>
+                    <p>Creating structured web pages with HTML, ensuring semantic clarity and content organization.</p>
                 </div>
                 <div class="skills-card">
                     <img src="images/icons8-css3-96.png" alt="CSS Icon" class="skill-icon">
@@ -272,7 +248,12 @@
                 </div>
                 <div class="skills-card">
                     <img src="images/icons8-javascript-logo-96.png" alt="JavaScript Icon" class="skill-icon">
-                    <h3>JavaScript </h3>
+                    <h3>JavaScript</h3>
+                    <p>Implementing interactive features and dynamic content to enhance user experiences on websites.</p>
+                </div>
+                <div class="skills-card">
+                    <img src="images/icons8-bootstrap-96.png" alt="JavaScript Icon" class="skill-icon">
+                    <h3>Boostrap </h3>
                     <p>Implementing interactive features and dynamic content to enhance user experiences on websites.</p>
                 </div>
                 <div class="skills-card">
